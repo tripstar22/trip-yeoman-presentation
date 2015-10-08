@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Yeoman Presentation</title>
+
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+
+  <link rel="stylesheet" href="../dist/css/app.css" type="text/css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <section class="text-center">
+          <h1>Yo, Yeoman!</h1>
+
+          <p class="lead">A modern scaffolding tool for building web apps.</p>
+          <a href="http://yeoman.io/" target="_blank">http://yeoman.io/</a>
+        </section>
+
+        <section>
+          <h2>What is Yeoman?</h2>
+
+          <ul>
+            <li>Yeoman is a toolkit that quickly generates the ecosystem for your project</li>
+            <li>Essentially it's a plugin that creates the scaffolding for your project</li>
+            <li>Creates robust and opinionated client-side stack</li>
+            <li>Using Yeoman and <span class="caps">score</span> together will create a faster and more efficient workflow</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Benefits of Yeoman</h2>
+
+          <ul>
+            <li>Ability to easily create a well thought out build process</li>
+            <li>Great for rapid prototyping and working in teams</li>
+            <li>Comes with tools and frameworks that help devs quickly build beautiful web apps</li>
+            <li>Includes support for linting, testing, minifying and much more!</li>
+            <li>Developers can focus on solutions rather than worrying about little things</li>
+          </ul>
+        </section>
+      </div>
+    </div><!-- /row -->
+
+    <div class="row">
+      <div class="col-sm-12">
+        <section>
+          <h2>How does it work?</h2>
+
+          <ul>
+            <li>Yeoman is a <a href="https://www.npmjs.com/" target="_blank">npm</a> package</li>
+            <li>Yeoman travels light and the initial installation does not come with any generators</li>
+            <li>Install generator that fits your project requirements or create your own generator for future use</li>
+            <li>Initialize generator in your project folder and let Yeoman do the heavy lifting for you!</li>
+          </ul>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Install Yeoman on your computer&#58;</p>
+              <pre><code class="language-markup">npm install -g yo</code></pre>
+            </div>
+
+            <div class="col-sm-6">
+              <p>Install a generator to build your scaffolding&#58;</p>
+              <pre><code class="language-markup">npm install -g generator-foo</code></pre>
+
+              <p>Initialize the generator in your project folder:</p>
+              <pre><code class="language-markup">yo foo</code></pre>
+            </div>
+          </div><!-- /row -->
+        </section>
+
+        <section>
+          <h2>Tools <small>There are 3 types of tools in the Yeoman workflow</small></h2>
+
+          <div class="row">
+            <div class="col-sm-4 text-center">
+              <!-- YEOMAN LOGO -->
+              <a href="http://yeoman.io/" target="_blank">Yeoman</a>
+            </div>
+
+            <div class="col-sm-4 text-center">
+              <!-- GULP LOGO -->
+              <a href="http://gulpjs.com/" target="_blank">Gulp.js</a>
+            </div>
+
+            <div class="col-sm-4 text-center">
+              <!-- BOWER LOGO -->
+              <a href="http://bower.io/" target="_blank">Bower</a>
+            </div>
+          </div><!-- /row -->
+        </section>
+      </div>
+    </div><!-- /row -->
+
+    <div class="row">
+      <div class="col-lg-12">
+        <section>
+          <h2>Yeoman</h2>
+
+          <ul>
+            <li>Builds out scaffolding of project</li>
+            <li>Writes build configuration (Gulp.js or Grunt.js)</li>
+            <li>Pulls in relevant tasks and package manager dependencies via Bower</li>
+            <li>Thousands of flexible generators <a href="http://yeoman.io/generators/" target="_blank">here</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Gulp.js</h2>
+
+          <ul>
+            <li>Build, preview, and test your project</li>
+            <li>Does everything precompiler gui's do plus more!</li>
+            <li>Thousands of options for cleaning up and organizing your code <a href="http://gulpjs.com/plugins/" target="_blank">here</a></li>
+            <li><a href="https://www.npmjs.com/package/gulp-rem-to-px-cleanup" target="_blank">Example</a></li>
+          </ul>
+
+          <p>Run this code to watch your project via your terminal&#58;</p>
+          <pre><code class="language-markup">npm install --save-dev gulp-watch</code></pre>
+          <pre><code class="language-markup">gulp-watch</code></pre>
+
+          <a href="https://www.npmjs.com/package/gulp-watch" target="_blank">gulp-watch example</a>
+        </section>
+
+        <section>
+          <h2>Bower</h2>
+
+          <ul>
+            <li>Package manager</li>
+            <li>No longer have to manually download and manage packages</li>
+            <li>Vast majority of well-known plugins can be installed via Bower</li>
+            <li>Search through thousands of packages <a href="http://bower.io/search/" target="_blank">here</a></li>
+          </ul>
+
+          <p>Run this code to download packages for your project&#58;</p>
+          <pre><code class="language-markup">bower install</code></pre>
+        </section>
+
+
+        <section>
+          <h2>Additional Resources</h2>
+
+          <ul>
+            <li><a href="http://yeoman.io/authoring/" target="_blank">Writing your own Yeoman generator</a></li>
+            <li><a href="https://github.com/tripstar22/generator-yeoman-test-trip" target="_blank">Generator I created and used for this site</a></li>
+            <li><a href="https://github.com/yeoman/generator-generator" target="_blank">Yeoman generator for generating generators</a>. Created and maintained by the Yeoman team.</li>
+            <li><a href="https://github.com/Swiip/generator-gulp-angular" target="_blank">Yeoman generator for Gulp and Angular.js</a></li>
+            <li><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md" target="_blank">Getting started with Gulp</a></li>
+            <li><a href="https://github.com/vigetlabs/gulp-starter" target="_blank">Gulp Starter Kit</a></li>
+            <li><a href="http://bower.io/#install-bower" target="_blank">Getting started with Bower</a></li>
+          </ul>
+        </section>
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+<!-- SCRIPTS -->
+<script src="../dist/js/app.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-Y']);
+  _gaq.push(['_trackPageview']);
+  (function()
+  {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
