@@ -4,7 +4,7 @@
   "dependencies": {
     "FitText.js": "~1.2",
     "bootstrap-sass": "~3.3.5",
-    "superscrollorama": "~1.0.3",
+    "ScrollMagic": "~2.0.5",
     "prism": "~1.1.0"
   }
 }
