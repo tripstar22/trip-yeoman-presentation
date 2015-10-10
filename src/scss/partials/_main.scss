@@ -6,15 +6,17 @@ body {
 }
 
 .container-fluid {
-  //padding-left: 0;
-  //padding-right: 0;
+
+  pre {
+    @include border-radius(5px);
+  }
 }
 
 .top-section {
-  width: 100%;
+  //width: 100%;
   background: $site-white;
-  position: fixed;
-  z-index: 1;
+  //position: fixed;
+  //z-index: 1;
 
   h1, .lead {
     font-family: 'Merriweather', serif;
@@ -42,42 +44,55 @@ body {
   }
 }
 
-main {
-  position: relative;
-  z-index: 2;
 
-  h2 {
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 1.50em;
+  padding-bottom: 1.50em;
+
+  small {
+    color: $site-white;
     font-family: 'Merriweather', serif;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 1.50em;
-    padding-bottom: 1.50em;
+    font-weight: 400;
+  }
+}
 
-    small {
-      color: $site-white;
-      font-family: 'Merriweather', serif;
-      font-weight: 400;
-    }
+ul, .row-code-ex {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.row-code-ex {
+
+  a {
+    font-size: 20px;
+    text-decoration: underline;
+  }
+}
+
+ul {
+
+
+  li {
+    font-size: 30px;
+    padding-bottom: 16px;
   }
 
-  ul {
-    padding-left: 150px;
-
-    li {
-      font-size: 30px;
-      padding-bottom: 16px;
-    }
-
-    li a {
-      text-decoration: underline;
-    }
+  li a {
+    text-decoration: underline;
   }
 }
 
 .section-2, .section-5 {
   background: $site-md-blue;
 
-  h2, ul li {
+  h2, ul li, p {
     color: $site-white;
   }
 
@@ -93,15 +108,23 @@ main {
 .section-3, .section-6 {
   background: $site-dk-blue;
 
-  h2, ul li {
+  h2, ul li, p {
     color: $site-offwhite;
+  }
+
+  a {
+    color: $site-offwhite;
+
+    &:hover {
+      color: $site-offwhite;
+    }
   }
 }
 
 .section-4, .section-7 {
   background: $site-red;
 
-  h2, ul li {
+  h2, ul li, p {
     color: $site-white;
   }
 

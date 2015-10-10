@@ -1,11 +1,12 @@
 
-/*=============================================
-=            BOOTSTRAP-SASS STYLES            =
-=============================================*/
+/*====================================
+=            BOWER STYLES            =
+======================================*/
 
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap",
+        "../../bower_components/fullpage.js/jquery.fullPage";
 
-/*-----  End of BOOTSTRAP-SASS STYLES  ------*/
+/*-----  End of BOWER STYLES  ------*/
 
 
 /*=============================
@@ -39,7 +40,8 @@
 =            MIXINS            =
 ==============================*/
 
-
+@import
+  "mixins/border-radius";
 
 /*-----  End of MIXINS  ------*/
 
