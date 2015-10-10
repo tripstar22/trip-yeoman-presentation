@@ -6021,10 +6021,6 @@ body {
   font-family: 'Merriweather', serif;
   font-weight: 700; }
 
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0; }
-
 .top-section {
   width: 100%;
   background: #FFF;
@@ -6074,5 +6070,41 @@ section {
     text-decoration: underline; }
     section a:hover {
       color: #FFF; }
+
+@-webkit-keyframes ani-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }
+
+@keyframes ani-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }
+
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -20px;
+  width: 50px;
+  height: 28px;
+  background-image: url("../img/carrot-down@2x.png");
+  background-size: contain; }
+
+.bounce {
+  -webkit-animation: ani-bounce 2s infinite;
+          animation: ani-bounce 2s infinite; }
 
 /*-----  End of CUSTOM PARTIALS  ------*/
