@@ -1,2 +1,113 @@
 
+body {
+  position: relative;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.top-section {
+  width: 100%;
+  background: $site-white;
+  position: fixed;
+  z-index: 1;
+
+  h1, .lead {
+    font-family: 'Merriweather', serif;
+    color: $site-lt-blue;
+  }
+
+  h1 {
+    font-weight: 900;
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+  }
+
+  .lead {
+    font-size: 2.50em;
+    font-weight: 700;
+    padding-bottom: 3.0em;
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    max-width: 300px;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  background: $site-lt-blue;
+
+  h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    color: $site-white;
+    text-align: center;
+    padding-top: 1.50em;
+    padding-bottom: 1.50em;
+
+    small {
+      color: $site-white;
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+    }
+  }
+
+  ul {
+    padding-left: 150px;
+
+    li {
+      font-size: 30px;
+      color: $site-white;
+      padding-bottom: 16px;
+    }
+  }
+
+  a {
+    color: $site-white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $site-white;
+    }
+  }
+}
+
+//@keyframes ani-bounce {
+//  0%, 20%, 50%, 80%, 100% {
+//    transform: (translateY(0));
+//  }
+//  40% {
+//    transform: (translateY(-30px));
+//  }
+//  60% {
+//    transform: (translateY(-15px));
+//  }
+//}
+//
+//.arrow {
+//  position: fixed;
+//  bottom: 0;
+//  left: 50%;
+//  margin-left:-20px;
+//  width: 40px;
+//  height: 40px;
+//  background-image: ;
+//  background-size: contain;
+//}
+//
+//.bounce {
+//  animation: ani-bounce 2s infinite;
+//}

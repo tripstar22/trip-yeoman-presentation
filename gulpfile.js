@@ -2,17 +2,23 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     plumber = require('gulp-plumber'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    imagemin = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer');
 
 // sass task
 // compile
 // compress
+// autoprefix
 gulp.task('styles', function() {
     gulp.src('src/scss/**/*.scss')
         .pipe(plumber())
-        .pipe(sass({
-            style: 'compressed'
-        }))
+        .pipe(sass(
+        //{
+        //    style: 'compressed'
+        //}
+        ))
+        .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest('dist/css'))
         .pipe(livereload());
 });
@@ -27,6 +33,13 @@ gulp.task('scripts', function() {
         .pipe(livereload());
 });
 
+// minify images
+gulp.task('images', function() {
+    gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'));
+});
+
 // watch tasks
 // live reload
 // watch scss
@@ -39,11 +52,13 @@ gulp.task('watch', function() {
     // watch these tasks
     gulp.watch('src/scss/**/*.scss', ['styles']);
     gulp.watch('src/js/*.js', ['scripts']);
+    gulp.watch('src/img/*', ['images']);
 });
 
 // gulp runs all your tasks
 gulp.task('default', [
     'styles',
     'scripts',
+    'images',
     'watch'
 ]);
