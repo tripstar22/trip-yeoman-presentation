@@ -6045,30 +6045,45 @@ body {
 main {
   position: relative;
   z-index: 2; }
-
-section {
-  background: #2980B9; }
-  section h2 {
+  main h2 {
     font-family: 'Merriweather', serif;
     font-weight: 900;
-    color: #FFF;
     text-align: center;
     padding-top: 1.50em;
     padding-bottom: 1.50em; }
-    section h2 small {
+    main h2 small {
       color: #FFF;
       font-family: 'Merriweather', serif;
       font-weight: 400; }
-  section ul {
+  main ul {
     padding-left: 150px; }
-    section ul li {
+    main ul li {
       font-size: 30px;
-      color: #FFF;
       padding-bottom: 16px; }
-  section a {
-    color: #FFF;
-    text-decoration: underline; }
-    section a:hover {
+    main ul li a {
+      text-decoration: underline; }
+
+.section-2, .section-5 {
+  background: #2980B9; }
+  .section-2 h2, .section-2 ul li, .section-5 h2, .section-5 ul li {
+    color: #FFF; }
+  .section-2 a, .section-5 a {
+    color: #FFF; }
+    .section-2 a:hover, .section-5 a:hover {
+      color: #FFF; }
+
+.section-3, .section-6 {
+  background: #2C3E50; }
+  .section-3 h2, .section-3 ul li, .section-6 h2, .section-6 ul li {
+    color: #ECF0F1; }
+
+.section-4, .section-7 {
+  background: #E74C3C; }
+  .section-4 h2, .section-4 ul li, .section-7 h2, .section-7 ul li {
+    color: #FFF; }
+  .section-4 a, .section-7 a {
+    color: #FFF; }
+    .section-4 a:hover, .section-7 a:hover {
       color: #FFF; }
 
 @-webkit-keyframes ani-bounce {

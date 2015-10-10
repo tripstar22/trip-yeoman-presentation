@@ -18,7 +18,7 @@ body {
 
   h1, .lead {
     font-family: 'Merriweather', serif;
-    color: $site-lt-blue;
+    color: $site-md-blue;
   }
 
   h1 {
@@ -45,15 +45,10 @@ body {
 main {
   position: relative;
   z-index: 2;
-}
-
-section {
-  background: $site-lt-blue;
 
   h2 {
     font-family: 'Merriweather', serif;
     font-weight: 900;
-    color: $site-white;
     text-align: center;
     padding-top: 1.50em;
     padding-bottom: 1.50em;
@@ -70,14 +65,24 @@ section {
 
     li {
       font-size: 30px;
-      color: $site-white;
       padding-bottom: 16px;
     }
+
+    li a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.section-2, .section-5 {
+  background: $site-md-blue;
+
+  h2, ul li {
+    color: $site-white;
   }
 
   a {
     color: $site-white;
-    text-decoration: underline;
 
     &:hover {
       color: $site-white;
@@ -85,6 +90,31 @@ section {
   }
 }
 
+.section-3, .section-6 {
+  background: $site-dk-blue;
+
+  h2, ul li {
+    color: $site-offwhite;
+  }
+}
+
+.section-4, .section-7 {
+  background: $site-red;
+
+  h2, ul li {
+    color: $site-white;
+  }
+
+  a {
+    color: $site-white;
+
+    &:hover {
+      color: $site-white;
+    }
+  }
+}
+
+// keyframe animation for top section arrow
 @keyframes ani-bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: (translateY(0));
