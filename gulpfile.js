@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     livereload = require('gulp-livereload'),
     imagemin = require('gulp-imagemin'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    rename = require('gulp-rename');
 
 // sass task
 // compile
@@ -13,12 +14,9 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
     gulp.src('src/scss/**/*.scss')
         .pipe(plumber())
-        .pipe(sass(
-        //{
-        //    style: 'compressed'
-        //}
-        ))
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(autoprefixer('last 2 versions'))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css'))
         .pipe(livereload());
 });
@@ -28,7 +26,8 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     gulp.src('src/js/*.js')
         .pipe(plumber())
-        // .pipe(uglify())
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/js'))
         .pipe(livereload());
 });
