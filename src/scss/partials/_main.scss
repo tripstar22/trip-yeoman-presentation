@@ -10,8 +10,12 @@ body {
 
   .section {
 
-    @media (max-width: 767px) {
+    @media (max-width: 420px) {
       padding: 0 10px;
+    }
+
+    @media (max-width: 960px) {
+      padding: 0 30px;
     }
   }
 }
@@ -202,8 +206,13 @@ ul {
 }
 
 #fp-nav {
+  display: none;
 
-  ul li a span {
-    background: $site-dk-blue;
+  @media (min-width: 768px) {
+    display: block;
+
+    ul li a span {
+      background: $site-dk-blue;
+    }
   }
 }
