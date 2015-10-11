@@ -7,15 +7,18 @@ $(document).ready(function() {
         var windowHeight = $(window).height();
 
         // if window height is greater than 699px use fullpage.js
-        if ($(window.height > 699)) {
+        if ($(windowHeight > 699)) {
 
             // full page scrolling sections
-            $('#fullpage').fullpage();
+            $('#fullpage').fullpage({
+              navigation: true,
+              navigationPosition: 'right'
+            });
         }
 
         // fittext calls on h1 and h2
-        $("h1").fitText(0.8, { minFontSize: '24px', maxFontSize: '68px' });
-        $("h2").fitText(0.4, { minFontSize: '22px', maxFontSize: '50px' });
+        $("h1").fitText(1.5, { minFontSize: '20px', maxFontSize: '68px' });
+        $("h2").fitText(1.5, { minFontSize: '18px', maxFontSize: '50px' });
     }
 
     init();

@@ -4,11 +4,14 @@ body {
   font-family: 'Merriweather', serif;
   font-weight: 700;
 
-  @media (min-width: 700px) {
+  .no-padding {
+    padding: 0;
+  }
 
-    .nopadding {
-      padding: 0 !important;
-      margin: 0 !important;
+  .section {
+
+    @media (max-width: 767px) {
+      padding: 0 10px;
     }
   }
 }
@@ -20,7 +23,7 @@ body {
   }
 }
 
-.top-section {
+.section-1 {
   background: $site-white;
 
   h1, .lead {
@@ -34,9 +37,17 @@ body {
   }
 
   .lead {
-    font-size: 2.50em;
+    font-size: 18px;
     font-weight: 700;
     padding-bottom: 3.0em;
+
+    @media (min-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 40px;
+    }
   }
 
   a {
@@ -56,11 +67,9 @@ body {
 
 p {
 
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
 
-    .nopadding {
       font-size: 20px;
-    }
   }
 }
 
@@ -80,7 +89,7 @@ h2 {
 
 ul, .row-code-ex {
 
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
 
     padding-left: 150px;
     padding-right: 150px;
@@ -92,7 +101,7 @@ ul, .row-code-ex {
   a {
     text-decoration: underline;
 
-    @media (min-width: 700px) {
+    @media (min-width: 768px) {
 
       font-size: 20px;
     }
@@ -105,7 +114,7 @@ ul {
   li {
     padding-bottom: 16px;
 
-    @media (min-width: 700px) {
+    @media (min-width: 768px) {
 
       font-size: 30px;
     }
@@ -133,17 +142,17 @@ ul {
 }
 
 .section-3, .section-6 {
-  background: $site-dk-blue;
+  background: $site-white;
 
   h2, ul li, p {
-    color: $site-offwhite;
+    color: $site-md-blue;
   }
 
   a {
-    color: $site-offwhite;
+    color: $site-md-blue;
 
     &:hover {
-      color: $site-offwhite;
+      color: $site-md-blue;
     }
   }
 }
@@ -190,4 +199,11 @@ ul {
 
 .bounce {
   animation: ani-bounce 2s infinite;
+}
+
+#fp-nav {
+
+  ul li a span {
+    background: $site-dk-blue;
+  }
 }

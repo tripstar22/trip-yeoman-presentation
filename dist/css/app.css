@@ -6208,36 +6208,43 @@ body {
   position: relative;
   font-family: 'Merriweather', serif;
   font-weight: 700; }
-  @media (min-width: 700px) {
-    body .nopadding {
-      padding: 0 !important;
-      margin: 0 !important; } }
+  body .no-padding {
+    padding: 0; }
+  @media (max-width: 767px) {
+    body .section {
+      padding: 0 10px; } }
 
 .container-fluid pre {
   border-radius: 5px; }
 
-.top-section {
+.section-1 {
   background: #FFF; }
-  .top-section h1, .top-section .lead {
+  .section-1 h1, .section-1 .lead {
     font-family: 'Merriweather', serif;
     color: #2980B9; }
-  .top-section h1 {
+  .section-1 h1 {
     font-weight: 900;
     padding-bottom: 0.50em; }
-  .top-section .lead {
-    font-size: 2.50em;
+  .section-1 .lead {
+    font-size: 18px;
     font-weight: 700;
     padding-bottom: 3.0em; }
-  .top-section a {
+    @media (min-width: 768px) {
+      .section-1 .lead {
+        font-size: 28px; } }
+    @media (min-width: 1200px) {
+      .section-1 .lead {
+        font-size: 40px; } }
+  .section-1 a {
     display: block; }
-  .top-section img {
+  .section-1 img {
     max-width: 200px; }
     @media (min-width: 1200px) {
-      .top-section img {
+      .section-1 img {
         max-width: 300px; } }
 
-@media (min-width: 700px) {
-  p .nopadding {
+@media (min-width: 768px) {
+  p {
     font-size: 20px; } }
 
 h2 {
@@ -6251,20 +6258,20 @@ h2 {
     font-family: 'Merriweather', serif;
     font-weight: 400; }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   ul, .row-code-ex {
     padding-left: 150px;
     padding-right: 150px; } }
 
 .row-code-ex a {
   text-decoration: underline; }
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
     .row-code-ex a {
       font-size: 20px; } }
 
 ul li {
   padding-bottom: 16px; }
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
     ul li {
       font-size: 30px; } }
 
@@ -6281,13 +6288,13 @@ ul li a {
       color: #FFF; }
 
 .section-3, .section-6 {
-  background: #2C3E50; }
+  background: #FFF; }
   .section-3 h2, .section-3 ul li, .section-3 p, .section-6 h2, .section-6 ul li, .section-6 p {
-    color: #ECF0F1; }
+    color: #2980B9; }
   .section-3 a, .section-6 a {
-    color: #ECF0F1; }
+    color: #2980B9; }
     .section-3 a:hover, .section-6 a:hover {
-      color: #ECF0F1; }
+      color: #2980B9; }
 
 .section-4, .section-7 {
   background: #E74C3C; }
@@ -6333,5 +6340,8 @@ ul li a {
 .bounce {
   -webkit-animation: ani-bounce 2s infinite;
           animation: ani-bounce 2s infinite; }
+
+#fp-nav ul li a span {
+  background: #2C3E50; }
 
 /*-----  End of CUSTOM PARTIALS  ------*/
