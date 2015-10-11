@@ -3,6 +3,14 @@ body {
   position: relative;
   font-family: 'Merriweather', serif;
   font-weight: 700;
+
+  @media (min-width: 700px) {
+
+    .nopadding {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
 }
 
 .container-fluid {
@@ -13,10 +21,7 @@ body {
 }
 
 .top-section {
-  //width: 100%;
   background: $site-white;
-  //position: fixed;
-  //z-index: 1;
 
   h1, .lead {
     font-family: 'Merriweather', serif;
@@ -25,7 +30,6 @@ body {
 
   h1 {
     font-weight: 900;
-    padding-top: 0.50em;
     padding-bottom: 0.50em;
   }
 
@@ -40,13 +44,24 @@ body {
   }
 
   img {
-    max-width: 300px;
+    max-width: 200px;
+
+    @media (min-width: 1200px) {
+
+      max-width: 300px;
+    }
   }
 }
 
 
 p {
-  font-size: 20px;
+
+  @media (min-width: 700px) {
+
+    .nopadding {
+      font-size: 20px;
+    }
+  }
 }
 
 h2 {
@@ -64,15 +79,23 @@ h2 {
 }
 
 ul, .row-code-ex {
-  padding-left: 150px;
-  padding-right: 150px;
+
+  @media (min-width: 700px) {
+
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
 
 .row-code-ex {
 
   a {
-    font-size: 20px;
     text-decoration: underline;
+
+    @media (min-width: 700px) {
+
+      font-size: 20px;
+    }
   }
 }
 
@@ -80,8 +103,12 @@ ul {
 
 
   li {
-    font-size: 30px;
     padding-bottom: 16px;
+
+    @media (min-width: 700px) {
+
+      font-size: 30px;
+    }
   }
 
   li a {

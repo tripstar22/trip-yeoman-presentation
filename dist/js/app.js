@@ -4,30 +4,20 @@ $(document).ready(function() {
     // call all custom functions
     function init() {
 
-        // sectionHeight();
+        var windowHeight = $(window).height();
 
-        // full page scrolling sections
-        $('#fullpage').fullpage();
+        // if window height is greater than 699px use fullpage.js
+        if ($(window.height > 699)) {
+
+            // full page scrolling sections
+            $('#fullpage').fullpage();
+        }
 
         // fittext calls on h1 and h2
-        $("h1").fitText(1.2, { minFontSize: '24px', maxFontSize: '68px' });
-        $("h2").fitText(1.2, { minFontSize: '22px', maxFontSize: '50px' });
-
-        console.log("init works!");
+        $("h1").fitText(0.8, { minFontSize: '24px', maxFontSize: '68px' });
+        $("h2").fitText(0.4, { minFontSize: '22px', maxFontSize: '50px' });
     }
 
     init();
-
-    // make sections window height if window height greater than 699px
-    function sectionHeight() {
-
-        var windowHeight = $(window).height();
-
-        if ($(window.height > 699)) {
-
-          $("section").css("height", windowHeight);
-          $("main").css("top", windowHeight);
-        }
-    }
 
 });

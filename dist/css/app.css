@@ -6197,10 +6197,6 @@ html.fp-enabled,
 ==================================*/
 /* colors */
 /*-----  End of VARIABLES  ------*/
-/*===============================
-=            MODULES            =
-===============================*/
-/*-----  End of MODULES  ------*/
 /*==============================
 =            MIXINS            =
 ==============================*/
@@ -6212,6 +6208,10 @@ body {
   position: relative;
   font-family: 'Merriweather', serif;
   font-weight: 700; }
+  @media (min-width: 700px) {
+    body .nopadding {
+      padding: 0 !important;
+      margin: 0 !important; } }
 
 .container-fluid pre {
   border-radius: 5px; }
@@ -6223,7 +6223,6 @@ body {
     color: #2980B9; }
   .top-section h1 {
     font-weight: 900;
-    padding-top: 0.50em;
     padding-bottom: 0.50em; }
   .top-section .lead {
     font-size: 2.50em;
@@ -6232,10 +6231,14 @@ body {
   .top-section a {
     display: block; }
   .top-section img {
-    max-width: 300px; }
+    max-width: 200px; }
+    @media (min-width: 1200px) {
+      .top-section img {
+        max-width: 300px; } }
 
-p {
-  font-size: 20px; }
+@media (min-width: 700px) {
+  p .nopadding {
+    font-size: 20px; } }
 
 h2 {
   font-family: 'Merriweather', serif;
@@ -6248,17 +6251,22 @@ h2 {
     font-family: 'Merriweather', serif;
     font-weight: 400; }
 
-ul, .row-code-ex {
-  padding-left: 150px;
-  padding-right: 150px; }
+@media (min-width: 700px) {
+  ul, .row-code-ex {
+    padding-left: 150px;
+    padding-right: 150px; } }
 
 .row-code-ex a {
-  font-size: 20px;
   text-decoration: underline; }
+  @media (min-width: 700px) {
+    .row-code-ex a {
+      font-size: 20px; } }
 
 ul li {
-  font-size: 30px;
   padding-bottom: 16px; }
+  @media (min-width: 700px) {
+    ul li {
+      font-size: 30px; } }
 
 ul li a {
   text-decoration: underline; }
